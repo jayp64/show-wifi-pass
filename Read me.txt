@@ -1,0 +1,63 @@
+WiFi Password Viewer
+
+Description
+
+This batch script retrieves and displays saved WiFi network names (SSIDs) along with their passwords on a Windows system. It uses the netsh wlan command to list stored WiFi profiles and extract their passwords if available.
+
+Features
+
+Lists all saved WiFi profiles on the system.
+Retrieves and displays passwords for networks where they are stored.
+Uses netsh wlan show profiles and netsh wlan show profile name="SSID" key=clear to extract credentials.
+
+Usage
+
+1.Run the Script:
+
+Open Command Prompt as Administrator.
+
+Execute the script by double-clicking or running it in the terminal.
+
+2.Interpret Output:
+
+The script will display SSIDs along with their passwords (if stored).
+
+If a network does not have a stored password, it won't display a password.
+
+3.Pause for Review:
+
+The script pauses at the end to allow the user to review the results.
+
+Prerequisites
+
+Must be run on a Windows system.
+
+Requires Administrator privileges for full access to stored WiFi credentials.
+
+Disclaimer
+This script is intended for personal use to retrieve passwords of networks saved on your own system. Unauthorized use of this script on someone else's computer is illegal.
+
+Notes
+The script uses batch scripting with for loops and setlocal enabledelayedexpansion for variable handling.
+
+If a password is not found, it may indicate that the network was connected via WPS or has no stored key.
+
+Example Output
+
+=============================================
+   WiFi Network Names (SSIDs) and Passwords
+=============================================
+
+SSID: HomeWiFi  
+Password: mysecurepassword  
+
+SSID: OfficeNet  
+Password: office123  
+
+SSID: GuestWiFi  
+Password: guestpass  
+
+=============================================
+   End of List
+=============================================
+Press any key to continue . . .
